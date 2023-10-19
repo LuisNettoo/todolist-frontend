@@ -9,10 +9,12 @@ export const Container = styled.form`
   input {
     display: flex;
     flex: 1;
+
     background: var(--gray-500);
     border: 1px var(--gray-700) solid;
     outline: none;
     color: var(--gray-100);
+    font-size: 16px;
 
     padding: 16px;
     border-radius: 8px;
