@@ -25,6 +25,7 @@ export const GlobalStyles = createGlobalStyle`
 
   body {
     min-height: 100vh;
+    background: var(--gray-600);
   }
 
 `
