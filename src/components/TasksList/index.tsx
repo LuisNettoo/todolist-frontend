@@ -11,8 +11,8 @@ function TasksList() {
   return (
     <Container>
       <header>
-        <div>Tarefas criadas <span>0</span></div>
-        <div>Concluídas <span>0</span></div>
+        <div>Tarefas criadas <span>{tasks.length}</span></div>
+        <div>Concluídas <span>{`${0} de ${tasks.length}`}</span></div>
       </header>
       {tasks ? (tasks.map(task => (
         <TaskBox key={task.id} title={task.title} />
