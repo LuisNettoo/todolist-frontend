@@ -40,7 +40,7 @@ export function TasksProvider({ children }: TasksProviderProps) {
 
     const { task } = response.data
 
-    setTasks([...tasks, task])
+    setTasks([task, ...tasks])
   }
 
   return (
