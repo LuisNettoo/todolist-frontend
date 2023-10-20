@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const Container = styled.section`
   max-width: 1100px;
-  margin: 24px auto;
+  margin: 0 auto;
   text-align: center;
 
   border-top: 1px var(--gray-400) solid;

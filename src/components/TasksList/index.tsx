@@ -1,4 +1,6 @@
-import NoTasksRegistered from "../NoTasksRegistered"
+// import NoTasksRegistered from "../NoTasksRegistered"
+import NoTasksRegistered from "../NoTasksRegistered";
+import TaskBox from "../TaskBox"
 import { Container } from "./styles"
 
 function TasksList() {
@@ -8,7 +10,14 @@ function TasksList() {
         <div>Tarefas criadas <span>0</span></div>
         <div>Concluídas <span>0</span></div>
       </header>
-      <NoTasksRegistered />
+      {1 ? (
+        <>
+          <TaskBox />
+          <TaskBox />
+          <TaskBox />
+          <TaskBox />
+        </>
+      ) : (<NoTasksRegistered />)}
     </Container>
   )
 }

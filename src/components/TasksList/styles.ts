@@ -11,6 +11,8 @@ export const Container = styled.main`
     font-size: 14px;
     font-weight: bold;
 
+    margin-bottom: 24px;
+
     div:first-child {
       color: var(--blue);
     }
@@ -18,5 +20,17 @@ export const Container = styled.main`
     div:last-child {
       color: var(--purple);
     }
+
+    span {
+      color: var(--gray-200);
+      background: var(--gray-400);
+      padding: 2px 8px;
+      border-radius: 9px;
+      font-size: 12px;
+    }
+  }
+
+  > div + div {
+    margin-top: 12px;
   }
 `
