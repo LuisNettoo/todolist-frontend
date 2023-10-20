@@ -1,13 +1,16 @@
 import { Container } from "./styles"
 import TrashIcon from "../../assets/trash-icon"
 
+interface TaskBoxProps {
+  title: string;
+}
 
-function TaskBox() {
+function TaskBox({ title }: TaskBoxProps) {
   return (
     <Container>
       <div>
-        <input type="checkbox" />
-        <h2>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dignissimos similique minus eaque blanditiis, consequuntur id nisi amet accusantium minima a obcaecati voluptates possimus officia perspiciatis ratione placeat? Inventore, minus quod.</h2>
+        <input type="checkbox"  />
+        <h2>{title}</h2>
         <button><TrashIcon /></button>
       </div>
     </Container>
