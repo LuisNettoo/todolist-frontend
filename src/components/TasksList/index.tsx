@@ -15,7 +15,7 @@ function TasksList() {
         <div>Concluídas <span>{`${0} de ${tasks.length}`}</span></div>
       </header>
       {tasks ? (tasks.map(task => (
-        <TaskBox key={task.id} title={task.title} />
+        <TaskBox key={task.id} id={task.id} title={task.title} />
       ))) : (<NoTasksRegistered />)}
       
     </Container>

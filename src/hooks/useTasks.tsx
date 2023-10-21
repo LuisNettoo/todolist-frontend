@@ -17,6 +17,7 @@ interface TasksProviderProps {
 interface TasksContextData {
   tasks: Task[];
   createTask: (taskInput: TaskInput) => Promise<void>;
+  deleteTask: (id: string) => Promise<void>;
 }
 
 export const TasksContext = createContext<TasksContextData>(
@@ -36,15 +37,22 @@ export function TasksProvider({ children }: TasksProviderProps) {
     const response = await api.post("/tasks", {
       ...taskInput,
     })
-    console.log(response)
 
     const { task } = response.data
 
-    setTasks([task, ...tasks])
+    setTasks([...tasks, task])
+  }
+
+  const deleteTask = async (id: string) => {
+    const response =  await api.delete(`/tasks/${id}`)
+
+    const { tasks } = response.data
+
+    setTasks(tasks)
   }
 
   return (
-    <TasksContext.Provider value={{tasks, createTask}}>
+    <TasksContext.Provider value={{tasks, createTask, deleteTask}}>
       {children}
     </TasksContext.Provider>
   )
